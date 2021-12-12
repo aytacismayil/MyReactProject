@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --padding: 1rem;
+}
+
+.card-container {
+  margin: 1rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+}
+
+.card {
+  background: white;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, .25);
+  border-radius: .50rem;
+  overflow: hidden;
+}
+
+.card-header .header-title {
+  padding: 0 var(--padding);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.card-body {
+  color: rgb(173, 173, 173);
+  font-size: .9rem;
+  padding: 0 var(--padding);
+  margin-bottom: 1rem;
+}
+
+.card-footer {
+  padding: var(--padding);
+  padding-top: 0;
+}
+
+.btn {
+  border: none;
+  background-color: hsl(257, 100%, 80%);
+  padding: .75em 1.5em;
+  border-radius: .25em;
+  transition: background-color 200ms ease;
+  font-weight: 500;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+    background-color: hsl(257, 100%, 72%);
+}
+
+.card-header.header-img {
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-header.header-img > img {
+  display: block;
+  width: 100%;
+  max-height: 200px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  transition: filter 200ms ease-in-out;
+} 
+
+.card:hover > .card-header.header-img > img {
+	filter: brightness(0.9);
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: hsl(257, 100%, 80%);
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: hsl(257, 100%, 80%);
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+.center{
+  text-align: center;
+  padding: 15px 0;
+}
+
+.search {
+  width: 100%;
+  display: block;
+}
+
+.searchTerm {
+  width: 50%;
+  border: 3px solid hsl(257, 100%, 72%);
+  padding: 5px;
+  height: 40px;
+  border-radius: 5px ;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: hsl(257, 100%, 72%);
+}
+
+.searchButton {
+ 
+  border: 1px solid hsl(257, 100%, 72%);
+  background: hsl(257, 100%, 72%);
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 100%;
+ 
+}
+
+.background-white {
+  background-color: white;
+}
+
+.background-black {
+  background-color: black;
+}
