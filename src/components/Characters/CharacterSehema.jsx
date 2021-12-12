@@ -3,7 +3,7 @@ import CharacterItem from "./CharacterItem";
 import Loader from "../Ui/Loader";
 
 const CharacterSehema = (props) => {
-  const {handleDelete,items, isLoading, loadMore } = props;
+  const { handleDelete, items, isLoading, loadMore } = props;
 
   return isLoading ? (
     <Loader />
@@ -11,7 +11,11 @@ const CharacterSehema = (props) => {
     <div>
       <div className="card-container">
         {items?.slice(0, loadMore).map((item) => (
-          <CharacterItem characteritem={item} key={item.char_id} handleDelete={handleDelete}  />
+          <CharacterItem
+            characteritem={item}
+            key={item.char_id}
+            handleDelete={handleDelete}
+          />
         ))}
       </div>
     </div>
